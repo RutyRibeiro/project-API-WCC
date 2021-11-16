@@ -1,0 +1,24 @@
+{
+  "name": "project-api-wcc",
+  "version": "1.0.0",
+  "description": "api node express developed in the Women Can Code classes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RutyRibeiro/project-API-WCC.git"
+  },
+  "author": "Ruty Ribeiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RutyRibeiro/project-API-WCC/issues"
+  },
+  "homepage": "https://github.com/RutyRibeiro/project-API-WCC#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  }
+}
