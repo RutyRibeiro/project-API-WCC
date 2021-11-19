@@ -10,9 +10,9 @@ app.get("/", (req,res) =>{
 });
 
 const database = require("./models");
-database.sequelizeDatabase.sync({force:true}).then(() => {
-    console.log("drop and re-sync db.")
-});
+// database.sequelizeDatabase.sync({force:true}).then(() => {
+//     console.log("drop and re-sync db.")
+// });
 
 const router = require("./routes/articles.routes");
 router(app)

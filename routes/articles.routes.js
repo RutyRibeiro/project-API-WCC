@@ -20,5 +20,7 @@ module.exports = (app) =>{
 
     router.post("/", articleController.create);
 
+    router.get("/", articleController.getAll)
+
     app.use("/articles",router );
 } 

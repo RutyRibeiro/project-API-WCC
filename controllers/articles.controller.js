@@ -1,4 +1,6 @@
 // regras de negócio do sistema artigos
+const { response } = require("express");
+const { articles } = require("../models");
 const database = require("../models");
 const articleTable = database.articles
 
@@ -16,4 +18,13 @@ exports.create = (req,res) => {
         console.log(error)
     })
 };
+
+exports.getAll = (req,res) => {
+    const articles = articleTable.findAll().then((data)=>{
+        res.send(data)
+    }).catch((error)=>{
+        console.log(error)
+        res.status(500).send("Ocorreu um erro obtendo artigos")
+    });
+}
  
