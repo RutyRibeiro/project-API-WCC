@@ -20,7 +20,11 @@ module.exports = (app) =>{
 
     router.post("/", articleController.create);
 
-    router.get("/", articleController.getAll)
+    router.get("/listar-artigos", articleController.getAll)
+    
+    router.get("/listar-artigo-titulo", articleController.getOneByTitle)
+    
+    router.get("/listar-artigo-id", articleController.getOneById)
 
     app.use("/articles",router );
 } 
