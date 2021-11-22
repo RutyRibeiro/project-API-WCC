@@ -24,7 +24,15 @@ module.exports = (app) =>{
     
     router.get("/listar-artigo-titulo", articleController.getOneByTitle)
     
-    router.get("/listar-artigo-id", articleController.getOneById)
+    router.get("/listar-artigo-id/:id", articleController.getOneById)
 
-    app.use("/articles",router );
+    router.get("/listar-artigos-publicados", articleController.getAllActives)
+    
+    router.put("/alterar-artigo/:id", articleController.updateOne)
+    
+    router.delete("/deletar-todos-artigos", articleController.deleteAll)
+    
+    router.delete("/deletar-um-artigo/:id", articleController.deleteOne)
+
+    app.use("/articles",router);
 } 
